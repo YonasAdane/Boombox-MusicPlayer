@@ -1,0 +1,123 @@
+{
+  "content": {
+    "items": [
+      {
+        "content": {
+          "items": [],
+          "limit": 10,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 0
+        },
+        "custom_fields": [],
+        "external_urls": null,
+        "id": "section0JQ5DAqZH9ZZx2p0HZnp6H",
+        "images": [],
+        "name": "Pop",
+        "rendering": "HEADER",
+        "tag_line": null,
+        "type": "view"
+      },
+      {
+        "content": {
+          
+          "items": [
+            {
+              "collaborative": false,
+              "description": "Hozier is on top of the Hottest 50!",
+              "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M"
+              },
+              "id": "37i9dQZF1DXcBWIGoYBM5M",
+              "images": [
+                {
+                  "height": null,
+                  "url": "https://i.scdn.co/image/ab67706f000000020ba81215546ef8fd79aa92a7",
+                  "width": null
+                }
+              ],
+              "name": "Today’s Top Hits",
+              "owner": {
+                "display_name": "Spotify",
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/user/spotify"
+                },
+                "id": "spotify",
+                "type": "user",
+                "uri": "spotify:user:spotify"
+              },
+              "primary_color": null,
+              "public": null,
+              "snapshot_id": "MTcxNDEwNDAwMCwwMDAwMDAwMDQ4MmQzYjIzMTFlODcwNzljY2I4ZGM4NGQzNTAzYWVk",
+              "tracks": {
+                "total": 50
+              },
+              "type": "playlist",
+              "uri": "spotify:playlist:37i9dQZF1DXcBWIGoYBM5M"
+            },
+            {
+              "collaborative": false,
+              "description": "The hottest tracks in the United States. Cover: Taylor Swift",
+              "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0kbJZpiYdZl"
+              },
+              "id": "37i9dQZF1DX0kbJZpiYdZl",
+              "images": [
+                {
+                  "height": null,
+                  "url": "https://i.scdn.co/image/ab67706f00000002302ccd2fef27551e48922346",
+                  "width": null
+                }
+              ],
+              "name": "Hot Hits USA",
+              "owner": {
+                "display_name": "Spotify",
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/user/spotify"
+                },
+                "id": "spotify",
+                "type": "user",
+                "uri": "spotify:user:spotify"
+              },
+              "primary_color": null,
+              "public": null,
+              "snapshot_id": "MTcxNDEwNDAwMCwwMDAwMDAwMDliZjkzMGVjYjcwMjRhZTE4OTM3NTViY2UyNjJmNDQ0",
+              "tracks": {
+                "total": 50
+              },
+              "type": "playlist",
+              "uri": "spotify:playlist:37i9dQZF1DX0kbJZpiYdZl"
+            }
+          ],
+          "limit": 10,
+          "next": true,
+          "offset": 0,
+          "previous": null,
+          "total": 35
+        },
+        "custom_fields": [],
+        "external_urls": null,
+        "id": "section0JQ5IMCbQBLx2bk4MeMEPd",
+        "images": [],
+        "name": "Popular Pop Playlists",
+        "rendering": "LIST",
+        "tag_line": null,
+        "type": "view"
+      }
+    ],
+    "limit": 20,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 13
+  },
+  "custom_fields": [],
+  "external_urls": null,
+  "id": "page0JQ5DAqbMKFEC4WFtoNRpw",
+  "images": [],
+  "name": null,
+  "rendering": "STACK",
+  "tag_line": null,
+  "type": "view"
+}
