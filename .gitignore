@@ -10,11 +10,12 @@
 
 # production
 /build
-/public/assets
-/bestIdea.json
-/newIdea.jscon
-/req.js
+public/assets
+bestIdea.json
+newIdea.jscon
+req.js
 # misc
+.vscode
 .env
 .DS_Store
 .env.local
