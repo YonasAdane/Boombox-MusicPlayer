@@ -1,6 +1,6 @@
 import React  from 'react';
 import { useExploreQuery } from '../redux/Services/spotifyAPI';
-// import { ExploreInterface } from '../redux/interfaces/Explore.interface';
+import { Link } from 'react-router-dom';
 interface SectionItemsItem {
   content: {
     __typename: string;
@@ -25,6 +25,7 @@ interface SectionItemsItem {
       };
     };
   };
+  uri:string;
 }
 
 function Explore() {
@@ -35,7 +36,7 @@ function Explore() {
   const maincontainer = data?.data?.browseStart?.sections?.items[0];
   const subcontainer = data?.data?.browseStart?.sections?.items[0].sectionItems.items;
   const title = maincontainer?.data?.title.transformedLabel;
-
+    // console.log(data)
   return(
     <div className="Explore">
       <h2 className='main-title-Content'>{title}</h2>
@@ -48,16 +49,17 @@ function Explore() {
               const cardRepresentation = item?.content?.data?.data?.cardRepresentation;
               return (
                 <div className={item.content.__typename}>
-                  <div id="card" className={item.content.data.__typename}>
-                      <img
-                        src={cardRepresentation?.artwork.sources[0].url}
-                        // width={cardRepresentation?.artwork.sources[0].width}
-                        // height={cardRepresentation?.artwork.sources[0].height}
-                        alt="square"
-                        />
-                      <h2>{cardRepresentation?.title.transformedLabel}</h2>
-                  </div>
+                  <Link to={`/genre/${item?.uri.split(":").slice(-1)}`}>
+                    <div id="card" className={item.content.data.__typename}>
+                        <img
+                          src={cardRepresentation?.artwork.sources[0].url}
+                          alt="square"
+                          />
+                        <h2>{cardRepresentation?.title.transformedLabel}</h2>
+                    </div>
+                  </Link>
                 </div>
+
               );
             }
           }

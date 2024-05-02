@@ -1,16 +1,16 @@
 import { useGenreViewQuery } from "../redux/Services/spotifyAPI";
-import { GenreView,PurpleItem,FluffyItem } from "../redux/interfaces/GenreView.interface";
+import { PurpleItem,FluffyItem } from "../redux/interfaces/GenreView.interface";
 import { useParams } from "react-router";
 import TitleHeader from "./TitleHeader";
 import SquareDetailCard from "./cards/SquareDetailCard";
-import { ifError } from "assert";
 function Genre() {
-  const { genreid } = useParams();
+  const { genreid } = useParams<{ genreid: string }>();
   const { data,
     //  isLoading: queryIsLoading, 
     //  error: queryError 
-    } = useGenreViewQuery({genreID:"0JQ5DAqbMKFEC4WFtoNRpw"});
+    } = useGenreViewQuery({genreID:`${genreid}`});
     // console.log(data);
+    // "0JQ5DAqbMKFEC4WFtoNRpw"
   return (
     <div className="playlist-single-container">
       {data?.content?.items?.map((item: PurpleItem) => (
