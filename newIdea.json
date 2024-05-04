@@ -1,123 +1,121 @@
 {
-  "content": {
-    "items": [
-      {
-        "content": {
-          "items": [],
-          "limit": 10,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 0
-        },
-        "custom_fields": [],
-        "external_urls": null,
-        "id": "section0JQ5DAqZH9ZZx2p0HZnp6H",
-        "images": [],
-        "name": "Pop",
-        "rendering": "HEADER",
-        "tag_line": null,
-        "type": "view"
-      },
-      {
-        "content": {
-          
-          "items": [
-            {
-              "collaborative": false,
-              "description": "Hozier is on top of the Hottest 50!",
-              "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M"
-              },
-              "id": "37i9dQZF1DXcBWIGoYBM5M",
-              "images": [
-                {
-                  "height": null,
-                  "url": "https://i.scdn.co/image/ab67706f000000020ba81215546ef8fd79aa92a7",
-                  "width": null
-                }
-              ],
-              "name": "Today’s Top Hits",
-              "owner": {
-                "display_name": "Spotify",
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/user/spotify"
-                },
-                "id": "spotify",
-                "type": "user",
-                "uri": "spotify:user:spotify"
-              },
-              "primary_color": null,
-              "public": null,
-              "snapshot_id": "MTcxNDEwNDAwMCwwMDAwMDAwMDQ4MmQzYjIzMTFlODcwNzljY2I4ZGM4NGQzNTAzYWVk",
-              "tracks": {
-                "total": 50
-              },
-              "type": "playlist",
-              "uri": "spotify:playlist:37i9dQZF1DXcBWIGoYBM5M"
+  "tracks": [
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3t8WiyalpvnB9AObcMufiE"
             },
-            {
-              "collaborative": false,
-              "description": "The hottest tracks in the United States. Cover: Taylor Swift",
-              "external_urls": {
-                "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0kbJZpiYdZl"
-              },
-              "id": "37i9dQZF1DX0kbJZpiYdZl",
-              "images": [
-                {
-                  "height": null,
-                  "url": "https://i.scdn.co/image/ab67706f00000002302ccd2fef27551e48922346",
-                  "width": null
-                }
-              ],
-              "name": "Hot Hits USA",
-              "owner": {
-                "display_name": "Spotify",
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/user/spotify"
-                },
-                "id": "spotify",
-                "type": "user",
-                "uri": "spotify:user:spotify"
-              },
-              "primary_color": null,
-              "public": null,
-              "snapshot_id": "MTcxNDEwNDAwMCwwMDAwMDAwMDliZjkzMGVjYjcwMjRhZTE4OTM3NTViY2UyNjJmNDQ0",
-              "tracks": {
-                "total": 50
-              },
-              "type": "playlist",
-              "uri": "spotify:playlist:37i9dQZF1DX0kbJZpiYdZl"
-            }
-          ],
-          "limit": 10,
-          "next": true,
-          "offset": 0,
-          "previous": null,
-          "total": 35
+            "id": "3t8WiyalpvnB9AObcMufiE",
+            "name": "Mahmut Orhan",
+            "type": "artist",
+            "uri": "spotify:artist:3t8WiyalpvnB9AObcMufiE"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/40Hr91B6wn9pO83Gj0JMrP"
+            },
+            "id": "40Hr91B6wn9pO83Gj0JMrP",
+            "name": "Ali Arutan",
+            "type": "artist",
+            "uri": "spotify:artist:40Hr91B6wn9pO83Gj0JMrP"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5xkqotsRPu6KQ4PiWjSGQf"
+            },
+            "id": "5xkqotsRPu6KQ4PiWjSGQf",
+            "name": "Selin",
+            "type": "artist",
+            "uri": "spotify:artist:5xkqotsRPu6KQ4PiWjSGQf"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1B68g8b4wpedNDvvQLAoCe"
         },
-        "custom_fields": [],
-        "external_urls": null,
-        "id": "section0JQ5IMCbQBLx2bk4MeMEPd",
-        "images": [],
-        "name": "Popular Pop Playlists",
-        "rendering": "LIST",
-        "tag_line": null,
-        "type": "view"
-      }
-    ],
-    "limit": 20,
-    "next": null,
-    "offset": 0,
-    "previous": null,
-    "total": 13
-  },
-  "custom_fields": [],
-  "external_urls": null,
-  "id": "page0JQ5DAqbMKFEC4WFtoNRpw",
-  "images": [],
-  "name": null,
-  "rendering": "STACK",
-  "tag_line": null,
-  "type": "view"
+        "id": "1B68g8b4wpedNDvvQLAoCe",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273fa258529452f4ed34cc961b1",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02fa258529452f4ed34cc961b1",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851fa258529452f4ed34cc961b1",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "In Control (feat. Selin)",
+        "release_date": "2020-10-30",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:1B68g8b4wpedNDvvQLAoCe"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3t8WiyalpvnB9AObcMufiE"
+          },
+          "id": "3t8WiyalpvnB9AObcMufiE",
+          "name": "Mahmut Orhan",
+          "type": "artist",
+          "uri": "spotify:artist:3t8WiyalpvnB9AObcMufiE"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/40Hr91B6wn9pO83Gj0JMrP"
+          },
+          "id": "40Hr91B6wn9pO83Gj0JMrP",
+          "name": "Ali Arutan",
+          "type": "artist",
+          "uri": "spotify:artist:40Hr91B6wn9pO83Gj0JMrP"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5xkqotsRPu6KQ4PiWjSGQf"
+          },
+          "id": "5xkqotsRPu6KQ4PiWjSGQf",
+          "name": "Selin",
+          "type": "artist",
+          "uri": "spotify:artist:5xkqotsRPu6KQ4PiWjSGQf"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 179232,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USUS12000579"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1JDwfM6fzE7HtRukcJSZDd"
+      },
+      "id": "1JDwfM6fzE7HtRukcJSZDd",
+      "is_local": false,
+      "is_playable": true,
+      "linked_from": {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4WNcduiCmDNfmTEz7JvmLv"
+        },
+        "id": "4WNcduiCmDNfmTEz7JvmLv",
+        "type": "track",
+        "uri": "spotify:track:4WNcduiCmDNfmTEz7JvmLv"
+      },
+      "name": "In Control (feat. Selin)",
+      "popularity": 52,
+      "preview_url": "https://p.scdn.co/mp3-preview/1d53b96abb564f9ba08427c3c5361dd8fbe72f7d?cid=d8a5ed958d274c2e8ee717e6a4b0971d",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:1JDwfM6fzE7HtRukcJSZDd"
+    }
+  ]
 }

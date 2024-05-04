@@ -12,6 +12,13 @@
 *{
   font-family: 'Poppins',sans-serif;
 }
+a{
+  text-decoration: none;
+
+}
+/* a:visited{
+  color
+} */
 h2,h3{
   font-weight: 400;
 }

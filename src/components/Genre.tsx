@@ -32,6 +32,7 @@ function Genre() {
                     cover={carditem?.images[0]?.url}
                     title={carditem?.name}
                     subtitle={carditem?.description}
+                    link={`/${carditem?.type}/${carditem?.uri?.split(":").slice(-1)}`}
                     />
 
                 ))}

@@ -1,7 +1,7 @@
-import {useState} from 'react'
+import { useState} from 'react'
 import MainComponent from './MainComponent'
 import photo from "../profile-1.jpg"
-import PlaylistSingle from './PlaylistSingle'
+import Playlist from './Playlist'
 // import { UisHouseUser } from '@iconscout/react-unicons-solid'
 import search from '../Userinterface_search-53.svg'
 // import { Route, Routes } from 'react-router-dom'
@@ -11,7 +11,10 @@ import 'react-h5-audio-player/lib/styles.css';
 import SingleMusic from './SingleMusic'
 import Explore from './Explore'
 import Genre from './Genre'
+import { useNavigate } from 'react-router-dom'
+import Album from './Album'
 const Player:React.FC=() =>{
+    const Navigate=useNavigate()
     const playlist=[
         {src:"TheWeekndSaveYourTears.mp3"},
         {src:"7rings-ArianaGrande.m4a"},
@@ -19,6 +22,9 @@ const Player:React.FC=() =>{
         {src:"Stop,Drop,Roll-CantStopWontStop.m4a"},
     ];
     const [currentSong,setCurrentSong]=useState(0);
+    const GotoGenre=()=>{
+        Navigate("/Browse_all")
+    }
   return (
     <div className='player'>
         <div className='Sidebar'>
@@ -30,8 +36,8 @@ const Player:React.FC=() =>{
                 </div>
             </div>
             <div className='sub-box Search-bar'>
-                <img className='search-icn' src={search} alt="search-icon"/>
-                <input type="text"/>
+                <img className='search-icn' src={search} alt="search-icon" />
+                <input type="text" onClick={GotoGenre}/>
             </div>
             <div className='sub-box menu'>
                 <h2>MENU</h2>
@@ -72,8 +78,9 @@ const Player:React.FC=() =>{
             {/* <BrowserRouter> */}
                 <Routes>
                     <Route path="/" element={<MainComponent />} />
-                    <Route path="/playlist/:playid" element={<PlaylistSingle />} />
-                    <Route path="/song/:id" element={<SingleMusic />} />
+                    <Route path="/playlist/:playlistid" element={<Playlist />} />
+                    <Route path="/track/:trackid" element={<SingleMusic />} />
+                    <Route path="/album/:albumid" element={<Album />} />
                     <Route path="/Browse_all" element={<Explore />} />
                     <Route path="/genre/:genreid" element={<Genre />} />
                 </Routes>

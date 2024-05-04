@@ -5,7 +5,7 @@ interface ListCardProps{
     SongTitle:string;
     album:string;
     date:string;
-    cover:string;
+    cover?:string;
     duration:string;
     ArtistName:string;
 }
@@ -23,7 +23,9 @@ return (
     // ${music.profilePicture}`
         <div className="music-titles">
             <span className='number'>{num}</span>
+            {cover&&
             <span className='cover'><img src={cover} alt="cover"/></span>
+            }
             <span className='song'>
                 <div className="mz">
                     <h3>{SongTitle}</h3>

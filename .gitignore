@@ -12,6 +12,8 @@
 /build
 public/assets
 bestIdea.json
+/public/assets
+/bestIdea.json
 newIdea.jscon
 req.js
 # misc

@@ -3,6 +3,7 @@ import { ExploreInterface } from '../interfaces/Explore.interface';
 import { SearchInterface } from '../interfaces/Search.interface';
 import { PlaylistTracks } from '../interfaces/PlaylistTracks.interface';
 import { GenreView } from '../interfaces/GenreView.interface';
+import { AlbumInterface } from '../interfaces/Album.interface';
 const apiKey=process.env.REACT_APP_API_KEY;
 const hostAdr=process.env.REACT_APP_HOST_ADDRESS;
 export const SpotifyApi=createApi({
@@ -27,6 +28,9 @@ export const SpotifyApi=createApi({
                 }),
             GenreView:builder.query<GenreView, {genreID:string}>({
                 query:({genreID})=>`/genre_view/?id=${genreID}&content_limit=10&limit=20`
+            }),
+            Album:builder.query<AlbumInterface,{albumID:string}>({
+                query:({albumID})=>`/albums/?ids=${albumID}`
             }),
                 //single Album
             // GetAlbums:builder.query({
@@ -76,6 +80,7 @@ export const {
     useExploreQuery,
     usePlaylistTracksQuery,
     useGenreViewQuery,
+    useAlbumQuery,
     // useGetAlbumsQuery,
     // useAlbumTracksQuery,
     // useAlbumMetaDataQuery,

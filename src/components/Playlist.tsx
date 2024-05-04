@@ -10,9 +10,10 @@ import { PlaylistTracks,PlaylistTracksItem } from '../redux/interfaces/PlaylistT
 import { formatRelativeTime } from '../redux/Services/dateConverter'
 import { formatMillisecToMin } from '../redux/Services/msToMin'
 import TitleHeader from './TitleHeader'
-function PlaylistSingle() {
-    // const playlistID=params.playid;
-    const {data:allData}=usePlaylistTracksQuery({playlistID:"37i9dQZF1DWXJfnUiYjUKT"});
+import { useParams } from 'react-router'
+function Playlist() {
+    const { playlistid } = useParams<{ playlistid: string }>();
+    const {data:allData}=usePlaylistTracksQuery({playlistID:`${playlistid}`});
     /*    const trackName: string = data.track.name;
         const trackDurationMs: number = data.track.duration_ms;
         const trackPreviewUrl: string = data.track.preview_url;
@@ -70,4 +71,4 @@ return (
   )
 }
 
-export default PlaylistSingle
+export default Playlist
