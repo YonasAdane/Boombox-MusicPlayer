@@ -1,55 +1,42 @@
-import React, { useState } from 'react';
-// type Props = {}
-import playIcn from './play.svg'
-import { Link } from 'react-router-dom';
+import React from 'react';
 
 interface ListCardProps{
     num:number;
     SongTitle:string;
-    artist:string;
+    album:string;
     date:string;
+    cover?:string;
+    duration:string;
+    ArtistName:string;
 }
-const ListCard:React.FC<ListCardProps>=( {num,
+const ListCard:React.FC<ListCardProps>=( {
+    num,
     SongTitle,
-    artist,
-    date}) => {
-        const [isHovered, setIsHovered] = useState(false);
-        const [showPlayIcon, setShowPlayIcon] = useState(true);
-      
-        const handleMouseEnter = () => {
-          setIsHovered(true);
-          setShowPlayIcon(false);
-        };
-      
-        const handleMouseLeave = () => {
-          setIsHovered(false);
-          setShowPlayIcon(true);
-        };
-      
-  return (
-            <div className="music-titles"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            
-            >
-                <span
-                    className="number"
-                >
-                    {!showPlayIcon ? (
-                    <Link to="/">
-                        <div className="pl-icn">
-                            <img src={playIcn} alt="play-icn" />
-                        </div>
-                    </Link>
-                    ) : (
-                    ''
-                    )}
-                </span>
-                    <span className='song'>{SongTitle}</span>
-                    <span className='artist'>{artist}</span>
-                    <span className='date'>{date}</span>
-            </div>
-  )
+    album,
+    date,
+    cover,
+    duration,
+    ArtistName
+}) => {
+
+return (
+    // ${music.profilePicture}`
+        <div className="music-titles">
+            <span className='number'>{num}</span>
+            {cover&&
+            <span className='cover'><img src={cover} alt="cover"/></span>
+            }
+            <span className='song'>
+                <div className="mz">
+                    <h3>{SongTitle}</h3>
+                    <p>{ArtistName}</p> 
+                </div>
+            </span>
+            <span className='artist'><p>{album}</p></span>
+            <span className='duration'><p>{duration}</p></span>
+            <span className='date'><p>{date}</p></span>
+        </div>
+)
 }
 
 export default ListCard

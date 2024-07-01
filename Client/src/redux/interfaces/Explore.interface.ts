@@ -1,62 +1,62 @@
 export interface ExploreInterface {
-    data:       RootObjectData;
-    extensions: any[];
-   }
-   
-   export interface RootObjectData {
+data:       RootObjectData;
+extensions: any[];
+}
+
+export interface RootObjectData {
     browseStart: BrowseStart;
-   }
-   
-   export interface BrowseStart {
+}
+
+export interface BrowseStart {
     __typename: BrowseStartTypename;
     sections:   Sections;
     uri:        string;
-   }
-   
-   export enum BrowseStartTypename {
+}
+
+export enum BrowseStartTypename {
     BrowseClientFeature = "BrowseClientFeature",
     BrowseSectionContainer = "BrowseSectionContainer",
-   }
-   
-   export interface Sections {
+}
+
+export interface Sections {
     items: SectionsItem[];
-   }
-   
-   export interface SectionsItem {
+}
+
+export interface SectionsItem {
     data:         ItemData;
     sectionItems: SectionItems;
     uri:          string;
-   }
-   
-   export interface ItemData {
+}
+
+export interface ItemData {
     __typename: string;
     title:      Title;
-   }
-   
-   export interface Title {
+}
+
+export interface Title {
     transformedLabel: string;
-   }
-   
-   export interface SectionItems {
+}
+
+export interface SectionItems {
     items: SectionItemsItem[];
-   }
-   
-   export interface SectionItemsItem {
+}
+
+export interface SectionItemsItem {
     content: Content;
     uri:     string;
-   }
-   
-   export interface Content {
+}
+
+export interface Content {
     __typename: ContentTypename;
     data:       ContentData;
-   }
-   
-   export enum ContentTypename {
+}
+
+export enum ContentTypename {
     BrowseSectionContainerWrapper = "BrowseSectionContainerWrapper",
     BrowseXlinkResponseWrapper = "BrowseXlinkResponseWrapper",
-   }
-   
-   export interface ContentData {
+}
+
+export interface ContentData {
     __typename:       BrowseStartTypename;
     artwork?:         Artwork;
     backgroundColor?: BackgroundColor;
@@ -64,29 +64,28 @@ export interface ExploreInterface {
     featureUri?:      string;
     iconOverlay?:     Artwork;
     title?:           Title;
-   }
-   
-   export interface Artwork {
+}
+
+export interface Artwork {
     sources: Source[];
-   }
-   
-   export interface Source {
+}
+
+export interface Source {
     height: number;
     url:    string;
     width:  number;
-   }
-   
-   export interface BackgroundColor {
+}
+
+export interface BackgroundColor {
     hex: string;
-   }
-   
-   export interface DataData {
+}
+
+export interface DataData {
     cardRepresentation: CardRepresentation;
-   }
-   
-   export interface CardRepresentation {
+}
+
+export interface CardRepresentation {
     artwork:         Artwork;
     backgroundColor: BackgroundColor;
     title:           Title;
-   }
-   
+}

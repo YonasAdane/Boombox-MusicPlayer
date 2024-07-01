@@ -1,6 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { ExploreInterface } from '../interfaces/Explore.interface';
 import { SearchInterface } from '../interfaces/Search.interface';
+import { PlaylistTracks } from '../interfaces/PlaylistTracks.interface';
+import { GenreView } from '../interfaces/GenreView.interface';
+import { AlbumInterface } from '../interfaces/Album.interface';
 const apiKey=process.env.REACT_APP_API_KEY;
 const hostAdr=process.env.REACT_APP_HOST_ADDRESS;
 export const SpotifyApi=createApi({
@@ -15,11 +18,20 @@ export const SpotifyApi=createApi({
         }),
         endpoints:(builder)=>({
             Search: builder.query<SearchInterface, { artist: string; type: string; limit: number }>({
-                query: ({ artist, type, limit }) => `/search/?q=${artist}&type=${type}&offset=0&${limit}=10&numberOfTopResults=5`,
+                query:({ artist, type, limit }) => `/search/?q=${artist}&type=${type}&offset=0&${limit}=10&numberOfTopResults=5`,
                 }),
             Explore: builder.query<ExploreInterface, any>({
                 query: () => '/browse_all/'
                 }),
+            PlaylistTracks:builder.query<PlaylistTracks, {playlistID:string}>({
+                query:({playlistID})=>`/playlist_tracks/?id=${playlistID}&offset=0&limit=100`
+                }),
+            GenreView:builder.query<GenreView, {genreID:string}>({
+                query:({genreID})=>`/genre_view/?id=${genreID}&content_limit=10&limit=20`
+            }),
+            Album:builder.query<AlbumInterface,{albumID:string}>({
+                query:({albumID})=>`/albums/?ids=${albumID}`
+            }),
                 //single Album
             // GetAlbums:builder.query({
             //     query:(albumID:string|number)=>`/albums/?ids=${albumID}`
@@ -58,6 +70,7 @@ export const SpotifyApi=createApi({
             // ArtistRelated:builder.query({
             //     query:(artistID:string|number)=>`/artist_related/?id=${artistID}`
             // }),
+            
 
             }),
 })
@@ -65,6 +78,9 @@ export const SpotifyApi=createApi({
 export const {
     // useSearchQuery,
     useExploreQuery,
+    usePlaylistTracksQuery,
+    useGenreViewQuery,
+    useAlbumQuery,
     // useGetAlbumsQuery,
     // useAlbumTracksQuery,
     // useAlbumMetaDataQuery,
